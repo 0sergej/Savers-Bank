@@ -1,6 +1,6 @@
 # dependencies installed by npm
-node_modules/
-.cache/
+node_modules
+.cache
 
-# build artefacts
-dist/
+# build
+dist
