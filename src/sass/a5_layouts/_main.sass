@@ -4,20 +4,78 @@
     display: flex
     flex-direction: column
 
-    background-color: rgba(#fff52e, 1)
+    background-color: map-get($color, white)
 
-    padding-block-start: 2rem
-    padding-inline: 3rem
+    padding-block-start: map-get($size, small, 900)
+    padding-block-end: map-get($size, large, 700)
+    padding-inline: map-get($size, small, 800)
 
-    &__header
-        color: rgba(#ef495a, 1 )
+    height: 95vh
+    
+    justify-content: space-between
+    
+    &__heading     
+        font-size: map-get($font-size, small, 800)
+        font-weight: map-get($font-weight, 900 )
 
-        font-size: map-get($font-size, big, 500)
-        font-weight: 800
+        max-width: 14ch
 
-        max-width: 13ch
+        padding-block-end: 10px
 
+    &__text
+        font-size: map-get($font-size, small, 400)
+
+        text-transform: capitalize
+
+        max-width: 20ch
 
     &__img
-        width: 30rem
-        aspect-ration: 1/1
+        display: none
+
+        width: 40rem
+        height: 40rem
+        aspect-ratio: 1/1
+
+        @media (min-width: map-get($breakpoint, mobile))
+            display:block
+
+    &__div--lower
+        display: flex
+        flex-direction: column
+        justify-content: flex-end
+
+    &__input
+
+        border: $border-width $border-style map-get($color, primary)
+        border-radius: $border-radius
+
+        font-size: map-get($font-size, small, 500)
+
+        margin-block-end: map-get($size, small, 400 )
+
+        &::placeholder
+            text-align: center
+            color: map-get($color, primary)
+    
+    &__button
+        position: relative
+        
+        font-size: map-get($font-size, small, 600)
+
+        align-self: end
+
+    &--arrow
+        position: absolute
+        bottom: 15vh
+        
+        display: inline-block
+        
+        border: solid map-get($color, primary)
+        border-width: 0 4px 4px 0
+        border-radius: 3px
+        
+        padding: 6px
+
+        align-self: center
+
+        transform: rotate(45deg)

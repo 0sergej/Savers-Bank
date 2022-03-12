@@ -1,0 +1,19 @@
+@use 'a2_variables' as *
+
+.header
+    display: flex
+    gap: map-get($size, small,  400)
+    
+    background-color: map-get($color, primary)
+
+
+    padding-inline: map-get($size, small, 400) map-get($size, small, 600)
+    padding-block: 2vh
+
+    height: 8vh
+
+    justify-content: end
+
+    &__img
+        margin-inline-end: auto
+        max-width: 25vw
