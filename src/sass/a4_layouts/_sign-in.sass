@@ -1,0 +1,65 @@
+@use 'a2_variables' as *
+
+.sign-in
+    position: absolute
+    inset: 100px 0 auto 0
+    z-index: 10
+    
+    display: flex
+    flex-direction: column
+    
+    border: $border-width $border-style map-get($color, primary)
+    border-radius: $border-radius
+
+    background-color: map-get($color, secondary)
+
+    width: 80%
+
+    margin-inline: auto
+    padding-inline: map-get($size, medium, 300)
+
+    align-items: center
+
+    transform: translateX(-100px)
+
+.sign__close
+    position: relative
+    left: map-get($size, small, 800)
+
+    border: none
+
+    color: map-get($color, primary)
+    background-color: transparent
+
+    font-size: map-get($font-size, small, 500)
+    font-weight: map-get($font-weight, 700)
+
+    align-self: end
+
+.sign__header
+    font-size: map-get($font-size, small, 700)
+
+    color: map-get($color, primary)
+    
+    margin-block-end: map-get($size, small, 400)
+
+.sign__text
+    font-size: map-get($font-size, small, 400)
+
+    margin-block-end: map-get($size, small, 300)
+    margin-block-start: 0.75rem
+
+.sign__input
+
+    border: $border-width $border-style map-get($color, primary)
+    border-radius: $border-radius
+
+    font-size: map-get($font-size, small, 400)
+    
+    sign::placeholder
+        text-align: center
+
+.sign__button
+    margin-block: map-get($size, medium, 400) map-get($size, small, 500)
+
+    align-self: end
