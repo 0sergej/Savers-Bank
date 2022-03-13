@@ -4,29 +4,29 @@ const WALLET__CLOSE = document.querySelector('.wallet__close')
 
 let hidden = true
 
-function Hide() {
+function HideWallet() {
     if (hidden) {
         WALLET.classList.add('slide--right')
-        console.log('slide--right removed')
+        WALLET.classList.remove('fade')
 
         hidden = false
     } else if (!hidden) {
         WALLET.classList.remove('slide--right')
-        console.log('slide--right added')
+        WALLET.classList.add('fade')
 
         hidden = true
     }
 }
 
 SAVING__BUTTON.addEventListener('click', () => {
-    Hide()
+    HideWallet()
 })
 SAVING__BUTTON.addEventListener('keydown', () => {
-    Hide()
+    HideWallet()
 })
 WALLET__CLOSE.addEventListener('click', () => {
-    Hide()
+    HideWallet()
 })
 WALLET__CLOSE.addEventListener('keydown', () => {
-    Hide()
+    HideWallet()
 })
