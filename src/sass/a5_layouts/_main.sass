@@ -6,13 +6,15 @@
 
     background-color: map-get($color, white)
 
+    margin-block-start: 8vh
     padding-block-start: map-get($size, small, 900)
     padding-block-end: map-get($size, large, 700)
-    padding-inline: map-get($size, small, 800)
+    padding-inline: map-get($size, medium, 500)
 
     height: 95vh
     
     justify-content: space-between
+    
     
     &__heading     
         font-size: map-get($font-size, small, 800)
@@ -37,7 +39,7 @@
         aspect-ratio: 1/1
 
         @media (min-width: map-get($breakpoint, mobile))
-            display:block
+            display: block
 
     &__div--lower
         display: flex
@@ -55,7 +57,6 @@
 
         &::placeholder
             text-align: center
-            color: map-get($color, primary)
     
     &__button
         position: relative
@@ -66,7 +67,7 @@
 
     &--arrow
         position: absolute
-        bottom: 15vh
+        bottom: 10vh
         
         display: inline-block
         
