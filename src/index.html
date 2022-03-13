@@ -5,33 +5,63 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="./scss/style.sass">
+        <link rel="stylesheet" href="./sass/style.sass">
+        <script src="./js/wallet.js" defer></script>
     </head>
     <body>
-        <header class="header">
-            <button class="btn--sign-in">Sign In</button>
-            <button class="btn--log-in">Log In</button>
+        <header id="header" class="header">
+            <img src="./assets/img/Favicon.svg" alt="Logo" class="header__img">
+            <button class="button--secondary">Sign In</button>
         </header>
-        <main class="main">
-            <h1 class="main__header">Stop Spending Start Saving</h1>
-            <p class="main__text"></p>
-            <img src="./assets/img/Pig.svg" alt="Pig Saver" class="main__img">
+        <main id="main" class="main">
+            <div class="main__div--upper">
+                <h1 class="main__heading">Stop Spending, Start Saving!</h1>
+                <p class="main__text">1 dollar saved is worth, 2 dollars spent</p>
+                <img src="./assets/img/Pig.svg" alt="Pig Saver" class="main__img">
+            </div>
+            <div class="main__div--lower">
+                <input type="text" placeholder="E-mail" class="main__input">
+                <button class="main__button button--large">Sign In</button>
+            </div>
+            <a href="#saving" class="main--arrow"></a>
         </main>
-        <section class="savings">
-            <h2 class="savings__header">Save up to 2% intrest rate annually with our "Retainment Wallet"!</h2>
-            <img src="./assets/img/Intrest-rate.svg" alt="Intrest rate" class="saving__img">
-            <p class="saving__text"></p>
+        <section id="saving" class="saving">
+            <h2 class="saving__header">
+                Save with up to 2% intrest rate annually with our
+                <span class="saving__span">
+                    "Retainment Wallet"!
+                </span>
+            </h2>
+            <p class="saving__text">Our wallet gives benefits even to those who are already retaired.</p>
+            <div class="saving__div--lower">
+                <img src="./assets/img/Crypto-wallet.svg" alt="Wallet" class="saving__img">
+                <button class="saving__button 
+                button--ghost">
+                    Open your wallet &#8250;
+                </button>
+            </div>
+            <section class="wallet">
+                <button class="wallet__close">X</button>
+                <h2 class="wallet__header">Open Your Wallet</h2>
+                <p class="wallet__text">Enter your email address</p>
+                <input type="text" class="wallet__input" placeholder="E-Mail">
+                <p class="wallet__text">Enter your password</p>
+                <input type="password" placeholder="*******" class="wallet__input">
+                <p class="wallet__text">Repeat Your password</p>
+                <input type="password" class="wallet__input" placeholder="*******">
+                <button class="wallet__button button--ghost">Continue</button>
+            </section>
         </section>
-        <section class="young">
+        <section id="young" class="young">
             <img src="./assets/img/Credit-card.svg" alt="Teenager" class="young__teenager">
             <h2 class="young__header">Not Only for Boomers</h2>
             <p class="young__text">Start building your credit score at only age of 16!</p>
         </section>
-        <section class="crypto">
+        <section id="crypto" class="crypto">
             <img src="./assets/img/Crypto-wallet.svg" alt="Crypto Wallet" class="crypto__img--wallet">
             <h2 class="crypto__heading">Save and Invest in Crypto</h2>
             <p class="crypto__text">More (intrest rate)bold, More (risk)bold!</p>
-            <img src="./assets/img/ezgif-4-e01322b720-removebg-preview 1 1.svg" alt="Crypto Intrest" class="crypto__img">
+            <img src="./assets/img/Exchange.svg" alt="Crypto Intrest" class="crypto__img">
         </section>
     </body>
 </html>

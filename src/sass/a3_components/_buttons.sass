@@ -1,0 +1,55 @@
+@use 'a2_variables' as *
+
+.button--large
+
+    display: flex
+
+    border: $border-width $border-style transparent
+    border-radius: $border-radius
+    
+    
+    color: map-get($color, secondary)
+    background-color: map-get($color, primary)
+
+    font-size: map-get($font-size, small,  300)
+    font-weight: map-get($font-weight, 600)
+
+    width: 100%
+
+    justify-content: center
+
+
+
+
+.button--secondary
+
+    border: $border-width $border-style transparent
+    border-radius: $border-radius
+    
+    color: map-get($color, secondary)
+    background-color: transparent
+
+    font-size: map-get($font-size, small, 300)
+    font-weight: map-get($font-weight, 600)
+
+    padding-block-start: 2px
+
+
+.button--ghost
+    border: $border-width $border-style map-get($color, primary)
+    border-radius: $border-radius
+
+    font-size: map-get($font-size, small, 500)
+    
+    color: map-get($color, primary)
+    background-color: transparent
+
+    padding: 3px 10px
+
+    &:hover,
+    &focus
+
+        border: $border-width $border-style map-get($color, secondary)
+
+        background-color: map-get($color, primary)
+        color: map-get($color, secondary)

@@ -1,0 +1,82 @@
+@use 'a2_variables' as *
+
+.main
+    display: flex
+    flex-direction: column
+
+    background-color: map-get($color, white)
+
+    margin-block-start: 8vh
+    padding-block-start: map-get($size, small, 900)
+    padding-block-end: map-get($size, large, 700)
+    padding-inline: map-get($size, medium, 500)
+
+    height: 95vh
+    
+    justify-content: space-between
+    
+    
+    &__heading     
+        font-size: map-get($font-size, small, 800)
+        font-weight: map-get($font-weight, 900 )
+
+        max-width: 14ch
+
+        padding-block-end: 10px
+
+    &__text
+        font-size: map-get($font-size, small, 400)
+
+        text-transform: capitalize
+
+        max-width: 20ch
+
+    &__img
+        display: none
+
+        width: 40rem
+        height: 40rem
+        aspect-ratio: 1/1
+
+        @media (min-width: map-get($breakpoint, mobile))
+            display: block
+
+    &__div--lower
+        display: flex
+        flex-direction: column
+        justify-content: flex-end
+
+    &__input
+
+        border: $border-width $border-style map-get($color, primary)
+        border-radius: $border-radius
+
+        font-size: map-get($font-size, small, 500)
+
+        margin-block-end: map-get($size, small, 400 )
+
+        &::placeholder
+            text-align: center
+    
+    &__button
+        position: relative
+        
+        font-size: map-get($font-size, small, 600)
+
+        align-self: end
+
+    &--arrow
+        position: absolute
+        bottom: 10vh
+        
+        display: inline-block
+        
+        border: solid map-get($color, primary)
+        border-width: 0 4px 4px 0
+        border-radius: 3px
+        
+        padding: 6px
+
+        align-self: center
+
+        transform: rotate(45deg)
