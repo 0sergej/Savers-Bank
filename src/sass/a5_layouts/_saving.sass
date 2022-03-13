@@ -1,0 +1,46 @@
+@use 'a2_variables' as *
+
+.saving
+
+    padding-block-start: map-get($size, medium, 900 )    
+    padding-inline: map-get($size, small, 500)
+    
+    text-align: center
+
+    &__header
+        font-size: map-get($font-size, small, 600)
+
+        max-width: 24ch
+
+        padding-block-end: map-get($size, small, 500)
+        margin-inline: auto
+
+        
+    
+    &__span
+        color: map-get($color, primary)
+
+    &__text
+        
+        font-size: map-get($font-size, small, 400)
+
+        max-width: 30ch
+        margin-inline: auto
+
+    &__div--lower
+        display: flex
+
+        margin-block-start: map-get($size, medium, 700)
+    
+        align-items: center
+
+    &__img
+        width:60%
+
+    &__button
+
+        font-weight: map-get($font-weight, 700)
+
+        @media (max-width: map-get($breakpoint, mobile))
+
+            max-width: 12ch
