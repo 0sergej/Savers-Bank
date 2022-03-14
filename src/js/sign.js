@@ -7,12 +7,12 @@ let hidden = true
 function HideSignIn() {
     if (hidden) {
         SIGN__IN.classList.add('slide--right')
-        SIGN__IN.classList.remove('fade')
+        SIGN__IN.classList.remove('slide-out')
 
         hidden = false
     } else if (!hidden) {
         SIGN__IN.classList.remove('slide--right')
-        SIGN__IN.classList.add('fade')
+        SIGN__IN.classList.add('slide-out')
 
         hidden = true
     }

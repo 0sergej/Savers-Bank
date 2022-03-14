@@ -7,12 +7,12 @@ let hidden = true
 function HideWallet() {
     if (hidden) {
         WALLET.classList.add('slide--right')
-        WALLET.classList.remove('fade')
+        WALLET.classList.remove('slide-out')
 
         hidden = false
     } else if (!hidden) {
         WALLET.classList.remove('slide--right')
-        WALLET.classList.add('fade')
+        WALLET.classList.add('slide-out')
 
         hidden = true
     }
