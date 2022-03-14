@@ -4,8 +4,7 @@
     display: flex
     flex-direction: column
 
-    background-color: map-get($color, white)
-
+    background-color:  $color-white
     margin-block-start: 8vh
     padding-block-start: map-get($size, small, 900)
     padding-block-end: map-get($size, large, 700)
@@ -34,9 +33,10 @@
     &__img
         display: none
 
-        width: 40rem
-        height: 40rem
+        width: 20rem
         aspect-ratio: 1/1
+
+        margin-inline-start: auto
 
         @media (min-width: map-get($breakpoint, mobile))
             display: block
@@ -48,7 +48,7 @@
 
     &__input
 
-        border: $border-width $border-style map-get($color, primary)
+        border: $border-width $border-style  $color-primary
         border-radius: $border-radius
 
         font-size: map-get($font-size, small, 500)
@@ -59,11 +59,7 @@
             text-align: center
     
     &__button
-        position: relative
-        
         font-size: map-get($font-size, small, 600)
-
-        align-self: end
 
     &--arrow
         position: absolute
@@ -71,7 +67,7 @@
         
         display: inline-block
         
-        border: solid map-get($color, primary)
+        border: solid  $color-primary
         border-width: 0 4px 4px 0
         border-radius: 3px
         

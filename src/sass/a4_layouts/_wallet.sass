@@ -8,10 +8,10 @@
     display: flex
     flex-direction: column
     
-    border: $border-width $border-style map-get($color, primary)
+    border: $border-width $border-style  $color-primary
     border-radius: $border-radius
 
-    background-color: map-get($color, secondary)
+    background-color:  $color-secondary
 
     width: 80%
 
@@ -20,15 +20,13 @@
 
     align-items: center
 
-    transform: translateX(-100px)
-
     &__close
         position: relative
         left: map-get($size, small, 800)
 
         border: none
 
-        color: map-get($color, primary)
+        color:  $color-primary
         background-color: transparent
 
         font-size: map-get($font-size, small, 500)
@@ -39,7 +37,7 @@
     &__header
         font-size: map-get($font-size, small, 700)
 
-        color: map-get($color, primary)
+        color:  $color-primary
         
         margin-block-end: map-get($size, small, 400)
 
@@ -51,7 +49,7 @@
 
     &__input
 
-        border: $border-width $border-style map-get($color, primary)
+        border: $border-width $border-style  $color-primary
         border-radius: $border-radius
 
         font-size: map-get($font-size, small, 400)
