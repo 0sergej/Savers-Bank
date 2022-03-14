@@ -1,6 +1,7 @@
 const SAVING__BUTTON = document.querySelector('.saving__button')
 const WALLET = document.querySelector('.wallet')
 const WALLET__CLOSE = document.querySelector('.wallet__close')
+const CONTINUE__BURTTON = document.querySelectorAll('.continue--button')
 
 let hidden = true
 
@@ -30,3 +31,12 @@ WALLET__CLOSE.addEventListener('click', () => {
 WALLET__CLOSE.addEventListener('keydown', () => {
     HideWallet()
 })
+
+for (let i = 0; i < CONTINUE__BURTTON.length; i++) {
+    CONTINUE__BURTTON[i].addEventListener('click', () => {
+        HideWallet()
+    })
+    CONTINUE__BURTTON[i].addEventListener('keydown', () => {
+        HideWallet()
+    })
+}

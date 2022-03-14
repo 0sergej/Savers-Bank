@@ -1,6 +1,7 @@
 const SIGN__IN__BUTTON = document.querySelectorAll('.button--sign-in')
 const SIGN__IN = document.querySelector('.sign-in')
 const SIGN__IN__CLOSE = document.querySelectorAll('.sign__close')
+const CONTINUE__BURTTON = document.querySelectorAll('.continue--button')
 
 let hidden = true
 
@@ -32,6 +33,15 @@ for (let i = 0; i < SIGN__IN__CLOSE.length; i++) {
         HideSignIn()
     })
     SIGN__IN__CLOSE[i].addEventListener('keydown', () => {
+        HideSignIn()
+    })
+}
+
+for (let i = 0; i < CONTINUE__BURTTON.length; i++) {
+    CONTINUE__BURTTON[i].addEventListener('click', () => {
+        HideSignIn()
+    })
+    CONTINUE__BURTTON[i].addEventListener('keydown', () => {
         HideSignIn()
     })
 }
