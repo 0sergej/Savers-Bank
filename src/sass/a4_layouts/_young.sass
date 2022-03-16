@@ -1,5 +1,44 @@
 @use 'a2_variables' as *
 
 .young
+    display: flex
+    flex-direction: column
 
-    margin-block-start: map-get($size, medium, 400)
+    margin-block-start: map-get($size, medium, 300)
+    
+
+    margin-inline: map-get($size, small, 700)
+
+    text-align: center
+    align-items: center
+
+    &__header
+
+        font-size: map-get($font-size, small, 800 )
+
+        margin-block-end: map-get($size, small, 600)
+
+.young__text
+
+    font-size: map-get($font-size, small, 500)
+
+    max-width: 30ch
+
+    span
+        color: $color-primary
+
+        font-size: map-get($font-size, small, 500)
+        font-weight: map-get($font-weight, 500)
+
+.young__img
+    width: 60%
+
+    margin-block-start: map-get($size, small, 800)
+    margin-block-end: map-get($size, small, 400)
+    
+.young__text--end
+
+    font-size: map-get($font-size, small, 400)
+    
+    span
+        color: $color-primary
