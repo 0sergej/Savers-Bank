@@ -1,4 +1,5 @@
 @use 'a2_variables' as *
+@use 'a3_utilities' as *
 
 .saving
     position: relative
@@ -9,25 +10,21 @@
     text-align: center
 
     &__header
-        font-size: map-get($font-size, small, 600)
-
-        max-width: 24ch
-
-        padding-block-end: map-get($size, small, 500)
+        @include title
         margin-inline: auto
 
-        
-    
+
     &__span
-        color:  $color-primary
-    &__text
-        
-        font-size: map-get($font-size, small, 400)
 
-        max-width: 30ch
+        color:  $color-primary
+
+    &__text
+
+        @include subtitle
+
         margin-inline: auto
 
-    &__div--lower
+    &__div
         display: flex
 
         margin-block-start: map-get($size, medium, 700)
