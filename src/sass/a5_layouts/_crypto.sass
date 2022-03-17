@@ -1,0 +1,52 @@
+@use 'a2_variables' as *
+@use 'a3_utilities' as *
+
+.crypto
+
+    display: flex
+    flex-direction: column
+
+    margin-block-start: map-get($size, medium, 300)
+    margin-inline: map-get($size, small, 700)
+
+    text-align: center
+    align-items: center
+
+    &__heading
+        @include title
+
+        span
+            color:$color-primary
+            font-size: inherit
+
+.crypto__text
+    @include subtitle
+    max-width: 20ch
+
+    span
+
+        color: $color-primary
+        color: map-get($size, small, 500 )
+
+.crypto__img
+
+    margin-block-start: 3rem
+    margin-block-end: 3rem
+    
+    max-width: 50%
+
+.crypto__start
+    margin-block-end: 5rem
+    margin-inline: auto
+
+    font-size: map-get($font-size, small, 500)
+
+    max-width: 90%
+
+    &:hover,
+    &:focus
+        border: $border-width $border-style $color-primary
+
+        color: $color-primary
+
+        background-color: $color-secondary
