@@ -10,88 +10,96 @@
         <script src="/sign.9752410c.js" defer=""></script>
     <script src="/style.27bce5bd.js"></script></head>
     <body>
+        <a href="#main" class="skip-nav">Skip Navigation</a>
         <header id="header" class="header">
             <img src="/Favicon.619aaf5f.svg" alt="Logo" class="header__img">
             <button class="__button--secondary button--sign-in">
                 Sign In
             </button>
         </header>
-    <main id="main" class="main">
-        <div class="main__div--upper">
-            <h1 class="main__heading">Stop Spending, Start Saving!</h1>
+        <main id="main" class="main">
+            <div class="main__div--upper">
+                <h1 class="main__heading">Stop Spending, Start Saving!</h1>
+            </div>
             <p class="main__text">1 dollar saved is worth, 2 dollars spent</p>
-            <img src="/Pig.092106a7.svg" alt="Pig Saver" class="main__img">
-        </div>
-        <div class="main__div--lower">
-            <input type="text" placeholder="E-mail" class="main__input">
-            <button class="button--sign-in main__button __button--primary">Sign In</button>
-            <a href="#saving" class="main--arrow"></a>
-        </div>
-        <section id="sign-in" class="sign-in slide-out">
-            <button class="sign__close">X</button>
-            <h2 class="sign__header">Open Your Wallet</h2>
-            <p class="sign__text">Enter your email address</p>
-            <input type="text" class="sign__input" placeholder="E-Mail">
-            <p class="sign__text">Enter your password</p>
-            <input type="password" placeholder="*******" class="sign__input">
-            <p class="sign__text">Repeat Your password</p>
-            <input type="password" class="sign__input" placeholder="*******">
-            <button class="continue--button __button--ghost">Continue</button>
+            <div class="main__div--lower">
+                <div class="main__div--input">
+                    <input type="text" placeholder="E-mail" class="main__input">
+                    <button class="button--sign-in main__button __button--primary">Sign In</button>
+                </div>
+                <a href="#saving" class="main--arrow"></a>
+                <img src="/Pig.092106a7.svg" alt="Pig Saver" class="main__img">
+            </div>
+            <dialog id="sign-in" class="sign-in slide-out">
+                <button class="sign-in--close">X</button>
+                <h2 class="sign__header">Open Your Wallet</h2>
+                <p class="sign__text">Enter your email address</p>
+                <input type="text" class="sign__input" placeholder="E-Mail">
+                <p class="sign__text">Enter your password</p>
+                <input type="password" placeholder="*******" class="sign__input">
+                <p class="sign__text">Repeat Your password</p>
+                <input type="password" class="sign__input" placeholder="*******">
+                <button class="continue--button--sign-in __button--ghost">Continue</button>
+            
+        </dialog></main>
+        <section id="saving" class="saving">
+            <h2 class="saving__header">
+                Save with up to 2% intrest rate annually with our
+                <span class="saving__span">
+                    "Retainment Wallet"!
+                </span>
+            </h2>
+            <p class="saving__text">Our wallet gives benefits even to those who are already retaired.</p>
+            <div class="saving__div">
+                <img src="/Crypto-wallet.713ebeb6.svg" alt="Wallet" class="saving__img">
+                <a href="#wallet">
+                    <button class="saving__button 
+                    __button--ghost">
+                        Open your wallet &#8250;
+                    </button>
+                </a>
+            </div>
+            <dialog id="wallet" class="wallet slide-out">
+                <button class="wallet__close">X</button>
+                <h2 class="wallet__header">Open Your Wallet</h2>
+                <p class="wallet__text">Enter your email address</p>
+                <input type="text" class="wallet__input" placeholder="E-Mail">
+                <p class="wallet__text">Enter your password</p>
+                <input type="password" placeholder="*******" class="wallet__input">
+                <p class="wallet__text">Repeat Your password</p>
+                <input type="password" class="wallet__input" placeholder="*******">
+                <button class="continue--button--wallet __button--ghost">Continue</button>
+            </dialog>
         </section>
-    </main>
-    <section id="saving" class="saving">
-        <h2 class="saving__header">
-            Save with up to 2% intrest rate annually with our
-            <span class="saving__span">
-                "Retainment Wallet"!
-            </span>
-        </h2>
-        <p class="saving__text">Our wallet gives benefits even to those who are already retaired.</p>
-        <div class="saving__div">
-            <img src="/Crypto-wallet.713ebeb6.svg" alt="Wallet" class="saving__img">
-            <button class="saving__button 
-                __button--ghost">
-                Open your wallet &#8250;
-            </button>
-        </div>
-        <section class="wallet slide-out">
-            <button class="wallet__close">X</button>
-            <h2 class="wallet__header">Open Your Wallet</h2>
-            <p class="wallet__text">Enter your email address</p>
-            <input type="text" class="wallet__input" placeholder="E-Mail">
-            <p class="wallet__text">Enter your password</p>
-            <input type="password" placeholder="*******" class="wallet__input">
-            <p class="wallet__text">Repeat Your password</p>
-            <input type="password" class="wallet__input" placeholder="*******">
-            <button class="continue--button __button--ghost">Continue</button>
-        </section>
-    </section>
-    <section id="young" class="young">
-        <h2 class="young__header">Start compounding from young age!</h2>
-        <p class="young__text">
-            Begin building your credit score at
-            <span>only age of 16!</span>
-        </p>
-        <div class="young__div">
-            <img src="/Credit-card.3f784897.svg" alt="Teenager" class="young__img">
-            <p class="young__text--end">
-                Shop with
-                <span>no limits!</span>
+        <section id="young" class="young">
+            <h2 class="young__header">Start compounding from young age!</h2>
+            <p class="young__text">
+                Begin building your credit score at
+                <span>only age of 16!</span>
             </p>
-        </div>
-    </section>
-    <section id="crypto" class="crypto">
-        <h2 class="crypto__heading">Save and Invest with
-            <span> Crypto!</span>
-        </h2>
-        <p class="crypto__text">More
-            <span>volatility</span> equals, More
-            <span> intrest rate?</span>
-        </p>
-        <img src="/Exchange.bf0d0b2d.svg" alt="Crypto Intrest" class="crypto__img">
-        <a href="#sign-in">
-            <button class="crypto__start __button--primary button--sign-in">Start Your Journey Now!</button>
-        </a>
-    </section>
-</body>
+            <div class="young__div">
+                <img src="/Credit-card.3f784897.svg" alt="Teenager" class="young__img">
+                <p class="young__text--end">
+                    Shop with
+                    <span>no limits!</span>
+                </p>
+            </div>
+        </section>
+        <section id="crypto" class="crypto">
+            <h2 class="crypto__heading">
+                Save and Invest with
+                <span> Crypto!</span>
+            </h2>
+            <p class="crypto__text">
+                More
+                <span>volatility</span>
+                equals, More
+                <span> intrest rate?</span>
+            </p>
+            <img src="/Exchange.bf0d0b2d.svg" alt="Crypto Intrest" class="crypto__img">
+            <a href="#sign-in">
+                <button class="crypto__start __button--primary button--sign-in">Start Your Journey Now!</button>
+            </a>
+        </section>
+    </body>
 </html>
