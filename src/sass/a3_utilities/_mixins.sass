@@ -16,8 +16,17 @@
 
     padding-block-end: map-get($size, small, 500)
 
+    @media (min-width: $breakpoint-mobile)
+
+        font-size: map-get($font-size, small, 800)
+
+
 @mixin subtitle
 
     font-size: map-get($font-size, small, 400)
 
     max-width: 30ch
+
+    @media (min-width: $breakpoint-mobile)
+
+        font-size: map-get($font-size, small, 600)
