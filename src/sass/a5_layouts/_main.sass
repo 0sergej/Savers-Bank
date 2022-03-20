@@ -1,4 +1,5 @@
 @use 'a2_variables' as *
+@use 'a3_utilities' as *
 
 .main
     display: flex
@@ -14,8 +15,13 @@
     height: 95vh
     
     justify-content: space-between
+
+    @media (min-width: $breakpoint-mobile)
+
+    padding-inline: map-get($size, small, 700)
     
     &__heading
+
         font-size: map-get($font-size, small, 800)
         font-weight: map-get($font-weight, 900 )
 
@@ -23,7 +29,14 @@
 
         padding-block-end: 10px
 
+        @media (min-width: $breakpoint-mobile)
+
+            font-size: map-get($font-size, medium, 400)
+
+
     &__text
+        @include subtitle
+
         font-size: map-get($font-size, small, 400)
 
         text-transform: capitalize
@@ -38,13 +51,22 @@
 
         margin-inline-start: auto
 
-        @media (min-width: map-get($breakpoint, mobile))
+        @media (min-width: $breakpoint-mobile)
             display: block
 
     &__div--lower
+
+        display: flex
+
+        justify-content: center
+
+    &__div--input
+
         display: flex
         flex-direction: column
+
         justify-content: flex-end
+
 
     &__input
 
@@ -57,9 +79,18 @@
 
         &::placeholder
             text-align: center
+
+        @media (min-width: $breakpoint-mobile)
+            max-width: 40vw
     
     &__button
         font-size: map-get($font-size, small, 600)
+
+        @media (min-width: $breakpoint-mobile)
+
+            width: 21vw
+
+            margin-inline: 5vw
 
     &--arrow
         position: absolute
@@ -76,3 +107,6 @@
         align-self: center
 
         transform: rotate(45deg)
+
+        @media (min-width: $breakpoint-mobile)
+            display: none

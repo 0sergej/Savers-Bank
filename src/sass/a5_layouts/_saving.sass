@@ -8,9 +8,9 @@
     padding-inline: map-get($size, small, 700)
     
     text-align: center
-
     &__header
         @include title
+        
         margin-inline: auto
 
 
@@ -28,21 +28,27 @@
         display: flex
 
         margin-block-start: map-get($size, medium, 700)
-    
+        margin-inline: auto
+
+        max-width: 45rem
+        
         align-items: center
 
-        @media (max-width: 400px)
+        @media (max-width: $breakpoint-mobile)
 
             flex-direction: column
             gap: map-get($size, small, 500 )
+            margin: 0
 
     &__img
-        width:60%
+        width:30rem
 
     &__button
 
         font-weight: map-get($font-weight, 700)
+        max-width: 12ch
 
-        @media (max-width: map-get($breakpoint, mobile))
 
-            max-width: 12ch
+        @media (min-width: $breakpoint-mobile)
+
+            margin-inline-end: map-get($size, medium, 400)
