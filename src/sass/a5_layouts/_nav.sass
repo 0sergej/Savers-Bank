@@ -1,0 +1,35 @@
+@use 'a2_variables' as *
+@use 'a3_utilities' as *
+
+.skip-nav
+    position: absolute
+    top: 0
+    left: 0
+    z-index: 100
+
+    display: flex
+
+    color: $color-primary
+    background-color: $color-white
+
+    font-size: map-get($font-size, small, 300 )
+    font-weight: map-get($font-weight, 600)
+    letter-spacing: 1.5px
+
+    border-bottom: $border-width $border-style $color-primary
+    border-right: $border-width $border-style $color-primary
+    border-radius: 0 0 15px 0
+
+    width: 10rem
+    height: 3rem
+
+    justify-content: center
+    align-items: center
+    
+    transform: translateY(-4rem)
+    transition: transform 230ms cubic-bezier(0.57, 0.06, 1, 0.37)
+
+    &:hover,
+    &:focus
+        transform: translateY(4rem)
+        transition: transform 230ms cubic-bezier(0.51, 0.6, 0.37, 0.82)
