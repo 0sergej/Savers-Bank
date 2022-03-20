@@ -30,7 +30,7 @@
                 <a href="#saving" class="main--arrow"></a>
                 <img src="./assets/img/Pig.svg" alt="Pig Saver" class="main__img">
             </div>
-            <section id="sign-in" class="sign-in slide-out">
+            <dialog id="sign-in" class="sign-in slide-out">
                 <button class="sign-in--close">X</button>
                 <h2 class="sign__header">Open Your Wallet</h2>
                 <p class="sign__text">Enter your email address</p>
@@ -52,12 +52,14 @@
             <p class="saving__text">Our wallet gives benefits even to those who are already retaired.</p>
             <div class="saving__div">
                 <img src="./assets/img/Crypto-wallet.svg" alt="Wallet" class="saving__img">
-                <button class="saving__button 
-                __button--ghost">
-                    Open your wallet &#8250;
-                </button>
+                <a href="#wallet">
+                    <button class="saving__button 
+                    __button--ghost">
+                        Open your wallet &#8250;
+                    </button>
+                </a>
             </div>
-            <section class="wallet slide-out">
+            <dialog id="wallet" class="wallet slide-out">
                 <button class="wallet__close">X</button>
                 <h2 class="wallet__header">Open Your Wallet</h2>
                 <p class="wallet__text">Enter your email address</p>
@@ -67,7 +69,7 @@
                 <p class="wallet__text">Repeat Your password</p>
                 <input type="password" class="wallet__input" placeholder="*******">
                 <button class="continue--button--wallet __button--ghost">Continue</button>
-            </section>
+            </dialog>
         </section>
         <section id="young" class="young">
             <h2 class="young__header">Start compounding from young age!</h2>
