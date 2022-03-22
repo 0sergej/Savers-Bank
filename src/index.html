@@ -11,9 +11,26 @@
     </head>
     <body>
         <a href="#main" class="skip-nav">Skip Navigation</a>
-        <header id="header" class="header">
+        <header id="header" class="[ header ] [ flex gap ]">
             <img src="./assets/img/Favicon.svg" alt="Logo" class="header__img">
-            <button class="__button--secondary button--sign-in">
+            <nav class="[ nav ] [ flex ]">
+                <a class="nav__item nav__switch" href="#"></a>
+                <ul class="[ nav__list ] [ flex--column gap ]">
+                    <li class="nav__item">
+                        <a href="#main" class=" nav__link">Home</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#wallet" class="nav__link">Wallet</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#young" class="nav__link">Credit Card</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#crypto" class="nav__link">Crypto</a>
+                    </li>
+                </ul>
+            </nav>
+            <button class="[ header__button ] [ __button--secondary button--sign-in ]">
                 Sign In
             </button>
         </header>
