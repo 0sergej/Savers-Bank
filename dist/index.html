@@ -11,26 +11,43 @@
     <script src="/style.27bce5bd.js"></script></head>
     <body>
         <a href="#main" class="skip-nav">Skip Navigation</a>
-        <header id="header" class="header">
+        <header id="header" class="[ header ] [ flex gap ]">
             <img src="/Favicon.619aaf5f.svg" alt="Logo" class="header__img">
-            <button class="__button--secondary button--sign-in">
+            <nav class="[ nav ] [ flex ]">
+                <a class="nav__item nav__switch" href="#"></a>
+                <ul class="[ nav__list ] [ flex--column gap ]">
+                    <li class="nav__item">
+                        <a href="#main" class=" nav__link">Home</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#wallet" class="nav__link">Wallet</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#young" class="nav__link">Credit Card</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#crypto" class="nav__link">Crypto</a>
+                    </li>
+                </ul>
+            </nav>
+            <button class="[ header__button ] [ __button--secondary button--sign-in ]">
                 Sign In
             </button>
         </header>
-        <main id="main" class="main">
+        <main id="main" class="[ main ] [ flex--column ]">
             <div class="main__div--upper">
                 <h1 class="main__heading">Stop Spending, Start Saving!</h1>
             </div>
             <p class="main__text">1 dollar saved is worth, 2 dollars spent</p>
-            <div class="main__div--lower">
-                <div class="main__div--input">
+            <div class="[ main__div--lower ] [ flex ]">
+                <div class="[ main__div--input ] [ flex--column ]">
                     <input type="text" placeholder="E-mail" class="main__input">
                     <button class="button--sign-in main__button __button--primary">Sign In</button>
                 </div>
                 <a href="#saving" class="main--arrow"></a>
-                <img src="/Pig.092106a7.svg" alt="Pig Saver" class="main__img">
+                <img src="/Pig.092106a7.svg" alt="Pig Saver" class="main__img hidden">
             </div>
-            <dialog id="sign-in" class="sign-in slide-out">
+            <dialog id="sign-in" class="[ sign-in ] [ flex--columns slide-out ]">
                 <button class="sign-in--close">X</button>
                 <h2 class="sign__header">Open Your Wallet</h2>
                 <p class="sign__text">Enter your email address</p>
@@ -59,7 +76,7 @@
                     </button>
                 </a>
             </div>
-            <dialog id="wallet" class="wallet slide-out">
+            <dialog id="wallet" class="[ wallet ] [ slide-out flex--column ]">
                 <button class="wallet__close">X</button>
                 <h2 class="wallet__header">Open Your Wallet</h2>
                 <p class="wallet__text">Enter your email address</p>
@@ -71,13 +88,13 @@
                 <button class="continue--button--wallet __button--ghost">Continue</button>
             </dialog>
         </section>
-        <section id="young" class="young">
+        <section id="young" class="[ young ] [ flex--column ]">
             <h2 class="young__header">Start compounding from young age!</h2>
             <p class="young__text">
                 Begin building your credit score at
                 <span>only age of 16!</span>
             </p>
-            <div class="young__div">
+            <div class="[ young__div ] [ flex gap ]">
                 <img src="/Credit-card.3f784897.svg" alt="Teenager" class="young__img">
                 <p class="young__text--end">
                     Shop with
@@ -85,7 +102,7 @@
                 </p>
             </div>
         </section>
-        <section id="crypto" class="crypto">
+        <section id="crypto" class="[ crypto ] [ flex--column ]">
             <h2 class="crypto__heading">
                 Save and Invest with
                 <span> Crypto!</span>
