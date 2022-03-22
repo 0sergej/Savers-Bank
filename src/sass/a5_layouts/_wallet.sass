@@ -1,12 +1,10 @@
 @use 'a2_variables' as *
 
 .wallet
+    
     position: absolute
     inset: 250px 0 auto 0
     z-index: -1
-    
-    display: flex
-    flex-direction: column
     
     border: $border-width $border-style  $color-primary
     border-radius: $border-radius
@@ -21,6 +19,7 @@
     align-items: center
     
     &__close
+
         position: relative
         left: map-get($size, small, 800)
 
@@ -35,6 +34,7 @@
         align-self: end
 
     &__header
+
         font-size: map-get($font-size, small, 700)
 
         color:  $color-primary
@@ -42,6 +42,7 @@
         margin-block-end: map-get($size, small, 400)
 
     &__text
+
         font-size: map-get($font-size, small, 400)
 
         margin-block-end: map-get($size, small, 300)
