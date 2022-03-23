@@ -15,11 +15,13 @@
     height: 8vh
     
     justify-content: end
-    align-items: start
+    align-items: center
     
     &__img
 
         width: 8rem
+
+        align-self: start
 
         @media (min-width: $breakpoint-tablet) 
             max-width: 25vw
@@ -29,3 +31,5 @@
         padding-block-start: 0
         
         font-size: map-get($font-size, small, 400 )
+        
+        align-self: start
