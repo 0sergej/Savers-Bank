@@ -44,13 +44,29 @@
     align-items: center
 
     &__switch
-        position: relative
-        top: 2vh
+        position: absolute
+        top: 32.5px
+        right: 50%
+        left: 50%
 
-        border-top: 2px solid white
+        background-color: white
 
         width: 2rem
-        
+        height: 2px
+
+        transform: translateX(0%)
+        transition: transform 200ms linear, background-color 200ms linear
+
+        &--background
+            position: absolute
+            inset: -15px -1px
+            z-index: 100
+
+            width: 35px
+            height: 35px
+
+            transform: translateX(0)
+
         &::before,
         &::after
             content: ''
@@ -59,15 +75,19 @@
 
             margin-left: 10%
 
-            border-top: 2px solid white
+            background-color: white
 
             width: 80%
+            height: 100%
+
+            transform: translateX(0%)
+            transition: transform 200ms linear
         
         &::before
             bottom: 0.5rem
 
         &::after
-            top: 7px
+            top: 0.5rem
         
         @media ( min-width: $breakpoint-PC )
             display: none
@@ -80,6 +100,7 @@
 
         @media ( min-width: $breakpoint-PC )
             flex-direction: row
+            display: flex
 
     &__link
 
