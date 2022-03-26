@@ -43,76 +43,78 @@
 
     align-items: center
 
-    &__switch
+:where(.nav__switch)
+    position: absolute
+    top: 32.5px
+    right: 50%
+    left: 50%
+
+    background-color: white
+
+    width: 2rem
+    height: 2px
+
+    transform: translateX(0%)
+    transition: transform 200ms linear, background-color 200ms linear
+
+    &::before,
+    &::after
+        content: ''
+
         position: absolute
-        top: 32.5px
-        right: 50%
-        left: 50%
+
+        margin-left: 10%
 
         background-color: white
 
-        width: 2rem
-        height: 2px
+        width: 80%
+        height: 100%
 
         transform: translateX(0%)
-        transition: transform 200ms linear, background-color 200ms linear
+        transition: transform 200ms linear
 
-        &--background
-            position: absolute
-            inset: -15px -1px
-            z-index: 100
+    &::before
+        bottom: 0.5rem
 
-            width: 35px
-            height: 35px
+    &::after
+        top: 0.5rem
 
-            transform: translateX(0)
+    @media ( min-width: $breakpoint-PC )
+        display: none
 
-        &::before,
-        &::after
-            content: ''
+:where(.nav__switch--background)
+    position: absolute
+    inset: -15px -1px
+    z-index: 100
+    
+    width: 35px
+    height: 35px
 
-            position: absolute
-
-            margin-left: 10%
-
-            background-color: white
-
-            width: 80%
-            height: 100%
-
-            transform: translateX(0%)
-            transition: transform 200ms linear
-        
-        &::before
-            bottom: 0.5rem
-
-        &::after
-            top: 0.5rem
-        
-        @media ( min-width: $breakpoint-PC )
-            display: none
+    transform: translateX(0)
 
 
-    &__list
-        margin-block-start: 4.3rem
+.nav__list
+    margin-block-start: 4.3rem
+
+    color: $color-white
+
+    gap: map-get($size, small, 300 )
+
+    @media ( min-width: $breakpoint-PC )
+        display: flex
+        flex-direction: row
+        margin: 0
+        gap: map-get($size, small, 500 )
+
+    @media ( min-width: $breakpoint-mobile )
         margin-inline-start: 2rem
 
-        color: $color-white
+.nav__link
 
-        gap: map-get($size, small, 300 )
+    font-size: map-get($font-size, small, 400 )
+    letter-spacing: 2px
 
-        @media ( min-width: $breakpoint-PC )
-            display: flex
-            flex-direction: row
-            margin: 0
-            gap: map-get($size, small, 500 )
-
-    &__link
-
-        font-size: map-get($font-size, small, 400 )
-        letter-spacing: 2px
-
-        &:hover,
-        &:focus
-            text-decoration: underline
+    &:hover,
+    &:focus
+        text-decoration: underline
 
