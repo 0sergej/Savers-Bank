@@ -100,14 +100,14 @@
 
     gap: map-get($size, small, 300 )
 
+    @media ( min-width: $breakpoint-mobile )
+        margin-inline-start: 2rem
+
     @media ( min-width: $breakpoint-PC )
         display: flex
         flex-direction: row
         margin: 0
         gap: map-get($size, small, 500 )
-
-    @media ( min-width: $breakpoint-mobile )
-        margin-inline-start: 2rem
 
 .nav__link
 
