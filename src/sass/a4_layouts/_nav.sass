@@ -43,7 +43,7 @@
 
     align-items: center
 
-:where(.nav__switch)
+:where(.nav__switch) //useing :where() to remove specificity to be able to override it with utility classes
     position: absolute
     top: 32.5px
     right: 50%
@@ -82,7 +82,7 @@
     @media ( min-width: $breakpoint-PC )
         display: none
 
-:where(.nav__switch--background)
+:where(.nav__switch--background) //useing :where() to remove specificity to be able to override it with utility classes
     position: absolute
     inset: -15px -1px
     z-index: 100
@@ -117,4 +117,3 @@
     &:hover,
     &:focus
         text-decoration: underline
-
