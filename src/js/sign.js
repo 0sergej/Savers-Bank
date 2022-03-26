@@ -1,7 +1,7 @@
 const SIGN__IN__BUTTON = document.querySelectorAll('.button--sign-in')
 const SIGN__IN = document.querySelector('#sign-in')
 const SIGN__IN__CLOSE = document.querySelector('.sign-in--close')
-const CONTINUE__BUTTON = document.querySelector('.continue--button--sign-in')
+const CONTINUE__BUTTON = document.querySelector('.button--sign-in')
 
 let hiddenSignIn = true
 
