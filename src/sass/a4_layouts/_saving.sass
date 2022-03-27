@@ -4,17 +4,32 @@
 .saving
     position: relative
 
-    padding-block-start: map-get($size, large, 500 )    
+    margin-block-end:  map-get($size, large, 700 )
+    padding-block-start: map-get($size, large, 500 )
     padding-inline: map-get($size, small, 700)
     
     text-align: center
 
     @include padding--PC
 
-    &__header
-        @include title
+    @media (min-width: $breakpoint-PC)
+        display: grid
         
+        grid-template-columns: 70% 30%
+
+        grid-column-gap: map-get($size, medium, 400)
+        grid-row-gap: map-get($size, small, 600 )
+
+        text-align: start
+        align-items: start
+
+    &__header
         margin-inline: auto
+        
+        @include title
+
+        @media ( min-width: $breakpoint-PC )
+            margin-inline: unset
 
 
     &__span
@@ -22,36 +37,31 @@
         color:  $color-primary
 
     &__text
+        
+        grid-column: 1/2
+        grid-row: 2/3
+
+        margin-inline: auto
+
+        @media ( min-width: $breakpoint-PC )
+            margin-inline: unset
 
         @include subtitle
 
-        margin-inline: auto
-
-    &__div
-        display: flex
-
-        margin-block-start: map-get($size, medium, 700)
-        margin-inline: auto
-
-        max-width: 45rem
-        
-        align-items: center
-
-        @media (max-width: $breakpoint-mobile)
-
-            flex-direction: column
-            gap: map-get($size, small, 500 )
-            margin: 0
-
     &__img
-        width:30rem
+
+        margin-inline: auto
+    
+        width: 30rem
+        
+        align-self: center
 
     &__button
 
+        margin-inline: auto
+
         font-weight: map-get($font-weight, 700)
+
         max-width: 12ch
 
-
-        @media (min-width: $breakpoint-mobile)
-
-            margin-inline-end: map-get($size, medium, 400)
+        align-self: center

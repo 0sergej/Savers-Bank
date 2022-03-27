@@ -1,4 +1,5 @@
 @use 'a2_variables' as *
+@use 'a5_utilities' as *
 
 .button--primary
 
@@ -36,7 +37,7 @@
     border: $border-width $border-style  $color-primary
     border-radius: $border-radius
 
-    font-size: map-get($font-size, small, 500)
+    @include subtitle
     
     color:  $color-primary
     background-color: transparent
