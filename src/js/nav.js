@@ -8,6 +8,8 @@ const NAV__ITEM = document.querySelectorAll('.nav__link')
 const FAVICON = document.querySelector('.favicon')
 const SIGN__IN__BUTTON = document.querySelector('.button--sign-in')
 
+const BUTTONS = document.querySelectorAll('button')
+
 let open = false
 let mobile = 600
 let PC = 1281
@@ -21,6 +23,10 @@ function Open() {
         FAVICON.classList.remove('hidden')
         SIGN__IN__BUTTON.classList.remove('padding--reset')
 
+        for (let i = 0; i < BUTTONS.length; i++) {
+            BUTTONS[i].disabled = false
+        }
+
         open = !open
     } else if (!open) {
         if (document.body.clientWidth < PC) {
@@ -31,6 +37,10 @@ function Open() {
             if (document.body.clientWidth <= mobile) {
                 FAVICON.classList.add('hidden')
                 SIGN__IN__BUTTON.classList.add('padding--reset')
+            }
+
+            for (let i = 0; i < BUTTONS.length; i++) {
+                BUTTONS[i].disabled = true
             }
             open = !open
         }
