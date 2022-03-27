@@ -11,6 +11,10 @@
 
         font-size: map-get($font-size, small, 800)
 
+    @media (min-width: $breakpoint-PC)
+
+        font-size: map-get($font-size, medium, 400)
+
 
 @mixin subtitle
 
@@ -20,7 +24,13 @@
 
     @media (min-width: $breakpoint-mobile)
 
-        font-size: map-get($font-size, small, 600)
+        font-size: map-get($font-size, small, 500)
+
+        max-width: 45ch
+
+    @media (min-width: $breakpoint-PC)
+
+        font-size: map-get($font-size, small, 700)
 
 @mixin  dialog($inset: 0 0 0 0)
 
@@ -40,4 +50,8 @@
 
     align-items: center
     text-align: center
-    
+
+@mixin padding--PC
+    @media (min-width: $breakpoint-PC)
+
+        padding-inline: map-get($size, large, 400)
