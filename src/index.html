@@ -15,7 +15,9 @@
         <header id="header" class="[ header ] [ flex gap ]">
             <img src="./assets/img/Favicon.svg" alt="Logo" class="header__img favicon">
             <nav class="[ nav ] [ flex ]">
-                <p class="nav__item nav__switch"><span class="nav__switch--background"></span></p>
+                <p class="nav__item nav__switch">
+                    <span class="nav__switch--background"></span>
+                </p>
                 <ul class="[ nav__list ] [ flex--column hidden ]">
                     <li class="nav__item">
                         <a href="#main" class=" nav__link">Home</a>
@@ -48,9 +50,9 @@
                 <a href="#saving" class="main--arrow"></a>
                 <img src="./assets/img/Pig.svg" alt="Pig Saver" class="main__img hidden">
             </div>
-            <dialog id="sign-in" class="[ sign-in ] [ flex--columns slide-out ]">
+            <dialog id="sign-in" class="[ sign-in ] [ flex--column slide-out ]">
                 <button class="sign-in--close">X</button>
-                <h2 class="sign__header">Open Your Wallet</h2>
+                <h2 class="sign__header">Open Your Accaunt</h2>
                 <p class="sign__text">Enter your email address</p>
                 <input type="text" class="sign__input" placeholder="E-Mail">
                 <p class="sign__text">Enter your password</p>
@@ -73,20 +75,20 @@
                 <a href="#wallet">
                     <button class="saving__button 
                     button--ghost">
-                        Open your wallet &#8250;
+                        Open your Accaunt &#8250;
                     </button>
                 </a>
             </div>
             <dialog id="wallet" class="[ wallet ] [ slide-out flex--column ]">
                 <button class="wallet__close">X</button>
-                <h2 class="wallet__header">Open Your Wallet</h2>
+                <h2 class="wallet__header">Open Your Accaunt</h2>
                 <p class="wallet__text">Enter your email address</p>
                 <input type="text" class="wallet__input" placeholder="E-Mail">
                 <p class="wallet__text">Enter your password</p>
                 <input type="password" placeholder="*******" class="wallet__input">
                 <p class="wallet__text">Repeat Your password</p>
                 <input type="password" class="wallet__input" placeholder="*******">
-                <button class="continue--button--wallet button--ghost">Continue</button>
+                <button class="continue--button button--ghost">Continue</button>
             </dialog>
         </section>
         <section id="young" class="[ young ] [ flex--column ]">
