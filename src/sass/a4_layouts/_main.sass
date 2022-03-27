@@ -63,13 +63,15 @@
 
     &__div--lower
 
+        margin-block-start: 15rem
+
         width: 100%
 
         justify-content: center
 
-        @media (max-width: $breakpoint-mobile)
+        @media (min-width: $breakpoint-mobile)
+            margin: 0
 
-            margin-block-start: 15rem
 
     &__div--input
 
@@ -93,12 +95,6 @@
     
     &__button
         font-size: map-get($font-size, small, 600)
-
-        @media (min-width: $breakpoint-mobile)
-
-            width: 21vw
-
-            margin-inline: 5vw
 
     &--arrow
 

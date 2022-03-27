@@ -4,7 +4,7 @@
 .saving
     position: relative
 
-    margin-block-end:  map-get($size, large, 700 )
+    margin-block-end:  map-get($size, large, 400 )
     padding-block-start: map-get($size, large, 500 )
     padding-inline: map-get($size, small, 700)
     
@@ -19,6 +19,8 @@
 
         grid-column-gap: map-get($size, medium, 400)
         grid-row-gap: map-get($size, small, 600 )
+
+        margin-block-end:  map-get($size, large, 700 )
 
         text-align: start
         align-items: start
@@ -52,9 +54,13 @@
 
         margin-inline: auto
     
-        width: 30rem
+        width: 20rem
         
         align-self: center
+
+        @media ( min-width: $breakpoint-mobile)
+            width: 30rem
+
 
     &__button
 

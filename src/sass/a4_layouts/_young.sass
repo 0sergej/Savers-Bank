@@ -7,8 +7,10 @@
     flex-direction: column
     
     margin-block-start: map-get($size, medium, 300)
-    padding-block-start: map-get($size, small, 700)
-    padding-block-end: map-get($size, small, 700)
+    margin-block-end:  map-get($size, large, 400 )
+
+    padding-block-start: map-get($size, medium, 500)
+    padding-block-end: map-get($size, medium, 300)
 
     color: $color-secondary
     background-color: $color-primary
@@ -20,6 +22,8 @@
         display: grid
         grid-template-columns: 70% 30%
         grid-column-gap: 4rem
+
+        margin-block-end:  map-get($size, large, 700 )
 
         text-align: start
         align-items: start
@@ -35,8 +39,10 @@
     grid-column: 1/2
     grid-row: 2/3
 
+    padding-block-start: map-get($size, small, 700)
+
     @media (min-width: $breakpoint-PC)
-        margin-inline-end: 4rem
+        margin-inline-end: map-get($size, medium, 400)
 
     @include subtitle
 
@@ -64,7 +70,7 @@
         grid-column: 1/3
         grid-row: 3/4
 
-        margin-block: 3rem
+        margin-block: map-get($size, small, 900)
         margin-inline-end: 9%
 
     @include subtitle
