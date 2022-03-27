@@ -1,0 +1,21 @@
+@use 'a2_variables' as *
+@use 'a5_utilities' as *
+
+.account--created
+    position: sticky
+    inset: auto 0 10vh 0
+
+    padding-inline: map-get($size, small, 700)
+    padding-block: map-get($size, small, 400)
+
+    border: $border-width $border-style $color-primary
+    border-radius: $border-radius
+
+    background-color: $color-white
+
+
+    &__text
+
+        color: $color-primary
+
+        font-weight: $font-weight-black
