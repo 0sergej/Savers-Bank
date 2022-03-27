@@ -5,14 +5,19 @@
     position: relative
 
     margin-block-end:  map-get($size, large, 400 )
-    padding-block-start: map-get($size, large, 500 )
+    margin-block-start: map-get($size, large, 400 )
     padding-inline: map-get($size, small, 700)
     
     text-align: center
 
     @include padding--PC
 
+    @media (min-width: $breakpoint-mobile)
+
+        margin-block-start: map-get($size, large, 800 )
+
     @media (min-width: $breakpoint-PC)
+
         display: grid
         
         grid-template-columns: 70% 30%
@@ -66,7 +71,7 @@
 
         margin-inline: auto
 
-        font-weight: map-get($font-weight, 700)
+        font-weight: $font-weight-700
 
         max-width: 12ch
 
