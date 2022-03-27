@@ -2,6 +2,7 @@ const SIGN__IN__BUTTON = document.querySelectorAll('.button--sign-in')
 const SIGN__IN = document.querySelector('#sign-in')
 const SIGN__IN__CLOSE = document.querySelector('.sign-in--close')
 const CONTINUE__BUTTON = document.querySelector('.continue--button--sign-in ')
+const ACCOUNT_CREATED = document.querySelector('.account--created')
 
 let hiddenSignIn = true
 
@@ -19,6 +20,13 @@ function HideSignIn() {
 
         hiddenSignIn = true
     }
+}
+
+function AccountCreated() {
+    ACCOUNT_CREATED.style.display = 'block' //shows message
+    setTimeout(() => {
+        ACCOUNT_CREATED.style.display = 'none' //hiddes message after 2000ms (2s)
+    }, 2000)
 }
 
 for (let i = 0; i < SIGN__IN__BUTTON.length; i++) {
@@ -41,9 +49,13 @@ SIGN__IN__CLOSE.addEventListener('keydown', e => {
 })
 CONTINUE__BUTTON.addEventListener('click', () => {
     HideSignIn()
+
+    AccountCreated()
 })
 CONTINUE__BUTTON.addEventListener('keydown', e => {
     if (e.key == 'enter') {
         HideSignIn()
+
+        AccountCreated()
     }
 })
