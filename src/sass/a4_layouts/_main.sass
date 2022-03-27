@@ -11,12 +11,16 @@
 
     height: 95vh
     
+    text-align: center
     justify-content: space-between
 
     @media (min-width: $breakpoint-mobile)
 
-    padding-inline: map-get($size, small, 700)
-    
+        padding-inline: map-get($size, small, 700)
+        text-align: start
+
+    @include padding--PC
+
     &__heading
 
         font-size: map-get($font-size, small, 800)
@@ -28,17 +32,22 @@
 
         @media (min-width: $breakpoint-mobile)
 
-            font-size: map-get($font-size, medium, 400)
+            font-size: map-get($font-size, medium, 500)
 
 
     &__text
-        @include subtitle
-
-        font-size: map-get($font-size, small, 400)
+        
+        font-weight: map-get($font-weight, 500)
 
         text-transform: capitalize
 
         max-width: 20ch
+
+        @include subtitle
+
+        @media (max-width: $breakpoint-mobile)
+
+            margin-block-start: 2rem
 
     &__img
         width: 20rem
@@ -47,11 +56,16 @@
         margin-inline-start: auto
 
         @media (min-width: $breakpoint-mobile)
+
             display: block
 
     &__div--lower
-        
+
         justify-content: center
+
+        @media (max-width: $breakpoint-mobile)
+
+            margin-block-start: 10rem
 
     &__div--input
 
@@ -83,10 +97,10 @@
             margin-inline: 5vw
 
     &--arrow
-        position: absolute
-        bottom: 10vh
-        
+
         display: inline-block
+
+        margin-block-start: 4rem
         
         border: solid  $color-primary
         border-width: 0 4px 4px 0
