@@ -1,54 +1,83 @@
 @use 'a2_variables' as *
+@use 'a5_utilities' as *
 
 .main
-    display: flex
-    flex-direction: column
-
-    background-color: map-get($color, white)
+    background-color:  $color-white
 
     margin-block-start: 8vh
     padding-block-start: map-get($size, small, 900)
-    padding-block-end: map-get($size, large, 700)
     padding-inline: map-get($size, medium, 500)
+    
+    text-align: center
+    align-items: center
 
-    height: 95vh
-    
-    justify-content: space-between
-    
-    
-    &__heading     
+    @media (min-width: $breakpoint-mobile)
+
+        padding-inline: map-get($size, small, 700)
+
+        align-items: start
+        text-align: start
+
+    @include padding--PC
+
+    &__heading
+
         font-size: map-get($font-size, small, 800)
-        font-weight: map-get($font-weight, 900 )
+        font-weight:  $font-weight-900
 
         max-width: 14ch
 
         padding-block-end: 10px
 
+        @media (min-width: $breakpoint-mobile)
+
+            font-size: map-get($font-size, medium, 500)
+
+
     &__text
-        font-size: map-get($font-size, small, 400)
+
+        font-weight: $font-weight-500
 
         text-transform: capitalize
 
         max-width: 20ch
 
-    &__img
-        display: none
+        @include subtitle
 
-        width: 40rem
-        height: 40rem
+        @media (max-width: $breakpoint-mobile)
+
+            margin-block-start: 2rem
+
+    &__img
+        width: 20rem
         aspect-ratio: 1/1
 
-        @media (min-width: map-get($breakpoint, mobile))
+        margin-inline-start: auto
+
+        @media (min-width: $breakpoint-mobile)
+
             display: block
 
     &__div--lower
-        display: flex
-        flex-direction: column
+
+        margin-block-start: 15rem
+
+        width: 100%
+
+        justify-content: center
+
+        @media (min-width: $breakpoint-mobile)
+            margin: 0
+
+
+    &__div--input
+
         justify-content: flex-end
+
 
     &__input
 
-        border: $border-width $border-style map-get($color, primary)
+        border: $border-width $border-style  $color-primary
         border-radius: $border-radius
 
         font-size: map-get($font-size, small, 500)
@@ -57,21 +86,20 @@
 
         &::placeholder
             text-align: center
+
+        @media (min-width: $breakpoint-mobile)
+            max-width: 40vw
     
     &__button
-        position: relative
-        
         font-size: map-get($font-size, small, 600)
 
-        align-self: end
-
     &--arrow
-        position: absolute
-        bottom: 10vh
-        
+
         display: inline-block
+
+        margin-block-start: 3rem
         
-        border: solid map-get($color, primary)
+        border: solid  $color-primary
         border-width: 0 4px 4px 0
         border-radius: 3px
         
@@ -80,3 +108,6 @@
         align-self: center
 
         transform: rotate(45deg)
+
+        @media (min-width: $breakpoint-mobile)
+            display: none

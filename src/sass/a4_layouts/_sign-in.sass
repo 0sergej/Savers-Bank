@@ -1,0 +1,47 @@
+@use 'a2_variables' as *
+@use 'a5_utilities' as *
+
+.sign-in
+    @include dialog(100px 0 auto 0)
+
+.sign-in--close
+    position: relative
+    left: map-get($size, small, 800)
+
+    border: none
+
+    color:  $color-primary
+    background-color: transparent
+
+    font-size: map-get($font-size, small, 500)
+    font-weight: $font-weight-700
+
+    align-self: end
+
+.sign__header
+    font-size: map-get($font-size, small, 700)
+
+    color:  $color-primary
+    
+    margin-block-end: map-get($size, small, 400)
+
+.sign__text
+    font-size: map-get($font-size, small, 400)
+
+    margin-block-end: map-get($size, small, 300)
+    margin-block-start: 0.75rem
+
+.sign__input
+
+    border: $border-width $border-style  $color-primary
+    border-radius: $border-radius
+
+    font-size: map-get($font-size, small, 400)
+    
+    &::placeholder
+        text-align: center
+
+.continue--button--sign-in
+    margin-block: map-get($size, medium, 400) map-get($size, small, 500)
+
+    align-self: end

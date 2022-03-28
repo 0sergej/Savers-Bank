@@ -1,47 +1,78 @@
 @use 'a2_variables' as *
+@use 'a5_utilities' as *
 
 .saving
     position: relative
 
-    padding-block-start: map-get($size, medium, 900 )    
-    padding-inline: map-get($size, small, 800)
+    margin-block-end:  map-get($size, large, 400 )
+    margin-block-start: map-get($size, large, 400 )
+    padding-inline: map-get($size, small, 700)
     
     text-align: center
 
-    &__header
-        font-size: map-get($font-size, small, 600)
+    @include padding--PC
 
-        max-width: 24ch
+    @media (min-width: $breakpoint-mobile)
 
-        padding-block-end: map-get($size, small, 500)
-        margin-inline: auto
+        margin-block-start: map-get($size, large, 800 )
 
+    @media (min-width: $breakpoint-PC)
+
+        display: grid
         
-    
+        grid-template-columns: 70% 30%
+
+        grid-column-gap: map-get($size, medium, 400)
+        grid-row-gap: map-get($size, small, 600 )
+
+        margin-block-end:  map-get($size, large, 700 )
+
+        text-align: start
+        align-items: start
+
+    &__header
+        margin-inline: auto
+        
+        @include title
+
+        @media ( min-width: $breakpoint-PC )
+            margin-inline: unset
+
+
     &__span
-        color: map-get($color, primary)
+
+        color:  $color-primary
 
     &__text
         
-        font-size: map-get($font-size, small, 400)
+        grid-column: 1/2
+        grid-row: 2/3
 
-        max-width: 30ch
         margin-inline: auto
 
-    &__div--lower
-        display: flex
+        @media ( min-width: $breakpoint-PC )
+            margin-inline: unset
 
-        margin-block-start: map-get($size, medium, 700)
-    
-        align-items: center
+        @include subtitle
 
     &__img
-        width:60%
+
+        margin-inline: auto
+    
+        width: 20rem
+        
+        align-self: center
+
+        @media ( min-width: $breakpoint-mobile)
+            width: 30rem
+
 
     &__button
 
-        font-weight: map-get($font-weight, 700)
+        margin-inline: auto
 
-        @media (max-width: map-get($breakpoint, mobile))
+        font-weight: $font-weight-700
 
-            max-width: 12ch
+        max-width: 12ch
+
+        align-self: center

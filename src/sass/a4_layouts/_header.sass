@@ -1,24 +1,31 @@
 @use 'a2_variables' as *
 
-.header
+:where(.header)
     position: fixed
     inset: 0 0 0 0
-    
-    display: flex
-    gap: map-get($size, small,  400)
-    
-    background-color: map-get($color, primary)
+    z-index: 100
 
+    background-color: $color-primary
+
+    border-block-end: $border-width $border-style $color-white
 
     padding-inline: map-get($size, small, 400) map-get($size, small, 600)
     padding-block: 2vh
 
     height: 8vh
-
+    
     justify-content: end
+    align-items: center
+    
+.header__img
 
-    z-index: 10
+    width: 8rem
 
-    &__img
-        margin-inline-end: auto
+    align-self: start
+
+    @media (min-width: $breakpoint-tablet) 
         max-width: 25vw
+
+.header__button
+    
+    font-size: map-get($font-size, small, 400 )

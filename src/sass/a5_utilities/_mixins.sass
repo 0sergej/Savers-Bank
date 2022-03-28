@@ -1,0 +1,59 @@
+@use 'a2_variables' as *
+
+@mixin title($max-width: 24ch)
+    font-size: map-get($font-size, small, 600)
+
+    max-width: 24ch
+
+    padding-block-end: map-get($size, small, 500)
+
+    @media (min-width: $breakpoint-mobile)
+
+        font-size: map-get($font-size, small, 800)
+
+    @media (min-width: $breakpoint-PC)
+
+        font-size: map-get($font-size, medium, 400)
+
+        max-width: $max-width
+
+
+@mixin subtitle($max-width: 45ch)
+
+    font-size: map-get($font-size, small, 400)
+
+    max-width: 30ch
+
+    @media (min-width: $breakpoint-mobile)
+
+        font-size: map-get($font-size, small, 500)
+
+        max-width: $max-width
+
+    @media (min-width: $breakpoint-PC)
+
+        font-size: map-get($font-size, small, 700)
+
+@mixin  dialog($inset: 0 0 0 0)
+
+    position: absolute
+    inset: $inset
+    
+    border: $border-width $border-style  $color-primary
+    border-radius: $border-radius
+
+    background-color:  $color-secondary
+
+    width: 80%
+    max-width: 400px
+
+    margin-inline: auto
+    padding-inline: map-get($size, medium, 300)
+
+    align-items: center
+    text-align: center
+
+@mixin padding--PC
+    @media (min-width: $breakpoint-PC)
+
+        padding-inline: map-get($size, large, 400)

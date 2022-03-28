@@ -1,0 +1,91 @@
+@use 'a2_variables' as *
+@use 'a5_utilities' as *
+
+.crypto
+    
+    margin-block-start: map-get($size, medium, 300)
+    margin-inline: map-get($size, small, 700)
+
+    text-align: center
+    align-items: center
+
+    @include padding--PC
+
+    @media (min-width: $breakpoint-PC)
+
+        display: grid
+        
+        grid-template-columns: 70% 30%
+
+        grid-column-gap: map-get($size, medium, 400)
+        grid-row-gap: map-get($size, small, 600 )
+
+        margin-block-end:  map-get($size, large, 700 )
+
+        text-align: start
+        align-items: start
+
+
+    &__heading
+
+        max-width: 24ch
+        
+        @include title($max-width: 45ch)
+
+        span
+            color:$color-primary
+            font-size: inherit
+
+.crypto__text
+
+    margin-inline: auto
+
+    @media ( min-width: $breakpoint-PC )
+
+        margin-inline: unset
+
+    span
+
+        color: $color-primary
+
+    @include subtitle($max-width: 28ch)
+
+.crypto__img
+
+    grid-column: 2 /  3
+    grid-row: 1 /  2
+
+    margin-block-start: 3rem
+    margin-block-end: 3rem
+    margin-inline: auto
+
+    width: 15rem
+    
+    align-self: center
+
+    @media ( min-width: $breakpoint-tablet)
+        width: 25rem
+
+.crypto__button
+
+    grid-column: 2 /  3
+    grid-row: 2 /  3
+
+    margin-block-end: 5rem
+    margin-inline: auto
+
+    font-size: map-get($font-size, small, 500)
+
+    max-width: 90%
+
+    @media ( min-width: $breakpoint-tablet)
+    
+        max-width: 13ch
+
+    &:hover,
+    &:focus
+        border: $border-width $border-style $color-primary
+
+        color: $color-primary
+
+        background-color: $color-secondary

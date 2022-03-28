@@ -1,0 +1,52 @@
+@use 'a2_variables' as *
+
+
+.slide-out
+    opacity: 0
+    z-index: -1
+    
+    transform: translateX(-100px)
+    transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1), opacity 300ms cubic-bezier(0.4, 0, 0.2, 1)
+
+
+.slide--right
+    opacity: 1
+    z-index: 10  
+
+    transform: translateX(0)
+    transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1), opacity 300ms cubic-bezier(0.4, 0, 0.2, 1)
+
+.flex
+    display:  flex
+
+.flex--column
+    display: flex
+    flex-direction: column
+
+.hidden
+    display: none
+
+.gap
+    gap: map-get($size, small, 500 )
+
+.open
+    height: 34vh  
+
+.change
+    background-color: transparent
+
+    transform: translateX(60%)
+
+.change::before
+    inset: 0
+    transform: translateX(-80%) rotate(-45deg)
+
+.change::after
+    inset: 0
+    transform: translateX(-80%) rotate(45deg)
+
+.change--background
+    transform: translateX(-60%)
+
+.padding--reset
+    align-self: center

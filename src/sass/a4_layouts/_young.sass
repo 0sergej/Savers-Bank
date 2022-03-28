@@ -1,0 +1,84 @@
+@use 'a2_variables' as *
+@use 'a5_utilities' as *
+
+.young
+
+    display: flex
+    flex-direction: column
+    
+    margin-block-start: map-get($size, medium, 300)
+    margin-block-end:  map-get($size, large, 400 )
+
+    padding-block-start: map-get($size, medium, 500)
+    padding-block-end: map-get($size, medium, 300)
+
+    color: $color-secondary
+    background-color: $color-primary
+
+    text-align: center
+    align-items: center
+
+    @media (min-width: $breakpoint-PC )
+        display: grid
+        grid-template-columns: 70% 30%
+        grid-column-gap: 4rem
+
+        margin-block-end:  map-get($size, large, 700 )
+
+        text-align: start
+        align-items: start
+    
+    @include padding--PC
+
+    &__header
+
+        @include title
+
+.young__text
+
+    grid-column: 1/2
+    grid-row: 2/3
+
+    padding-block-start: map-get($size, small, 700)
+
+    @media (min-width: $breakpoint-PC)
+        margin-inline-end: map-get($size, medium, 400)
+
+    @include subtitle
+
+    span
+        color: $color-secondary 
+
+        font-size: map-get($font-size, small, 600)
+        font-weight: $font-weight-600
+
+.young__img
+    width: 10rem
+
+    margin-block-start: map-get($size, medium, 400)
+    margin-block-end: map-get($size, small, 700)
+
+    @media (min-width: $breakpoint-PC )
+        margin-block-start: map-get($size, small, 800)
+
+        width: 60%
+        
+    
+.young__text--end
+
+    @media (min-width: $breakpoint-PC)
+        grid-column: 1/3
+        grid-row: 3/4
+
+        margin-block: map-get($size, small, 900)
+        margin-inline-end: 9%
+
+    @include subtitle
+
+    justify-self: end
+    
+    span
+
+        color: $color-secondary
+
+        font-weight: $font-weight-600
