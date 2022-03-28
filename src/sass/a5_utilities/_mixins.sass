@@ -1,6 +1,6 @@
 @use 'a2_variables' as *
 
-@mixin title
+@mixin title($max-width: 24ch)
     font-size: map-get($font-size, small, 600)
 
     max-width: 24ch
@@ -15,8 +15,10 @@
 
         font-size: map-get($font-size, medium, 400)
 
+        max-width: $max-width
 
-@mixin subtitle
+
+@mixin subtitle($max-width: 45ch)
 
     font-size: map-get($font-size, small, 400)
 
@@ -26,7 +28,7 @@
 
         font-size: map-get($font-size, small, 500)
 
-        max-width: 45ch
+        max-width: $max-width
 
     @media (min-width: $breakpoint-PC)
 
