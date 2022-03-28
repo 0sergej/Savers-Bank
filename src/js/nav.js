@@ -23,7 +23,7 @@ function Open() {
         FAVICON.classList.remove('hidden')
         SIGN__IN__BUTTON.classList.remove('padding--reset')
 
-        for (let i = 0; i < BUTTONS.length; i++) {
+        for (let i = 1; i < BUTTONS.length; i++) {
             BUTTONS[i].disabled = false
         }
 
@@ -39,7 +39,7 @@ function Open() {
                 SIGN__IN__BUTTON.classList.add('padding--reset')
             }
 
-            for (let i = 0; i < BUTTONS.length; i++) {
+            for (let i = 1; i < BUTTONS.length; i++) {
                 BUTTONS[i].disabled = true
             }
             open = !open
